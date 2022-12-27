@@ -37,6 +37,23 @@ form {
   margin: 30px auto;
 }
 
+.limpiar {
+  position: relative;
+  width: 100%;
+}
+
+.limpiar span {
+  background-color: #fa2727;
+  color: white;
+  border-radius: 15px;
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
+  transition: all 300ms;
+  visibility: hidden;
+  cursor: pointer;
+}
+
 textarea {
   width: 100%;
   flex-grow: 1;
@@ -91,12 +108,14 @@ button {
   box-shadow: 0 0 10px #fa2727;
 }
 
-#desencriptar {
+#desencriptar,
+#copiar {
   background-color: #eeeeee;
   border: 2px solid #fa2727
 }
 
-#desencriptar:hover {
+#desencriptar:hover,
+#copiar:hover {
   font-weight: 600;
   box-shadow: 0 0 10px #fa2727;
   cursor: pointer;
@@ -118,6 +137,20 @@ button {
   margin-bottom: 0.5rem;
 }
 
+#copiar {
+  display: none;
+  margin: 10px auto;
+  transition: all 300ms;
+}
+
+.done {
+  color: green;
+  font-size: 3rem;
+  font-weight: 900;
+  transition: all 300ms;
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   #logo {
     margin: 2rem;
@@ -134,16 +167,31 @@ button {
 }
 
 @media screen and (min-width: 1440px) {
+
+  body {
+    flex-direction: row;
+  }
+
   main {
     flex-direction: row;
   }
 
+  form {
+    margin-top: 15vh;
+  }
+
   button {
-    width: 30%;
+    width: 40%;
   }
 
   #resultado {
+    font-size: 1rem;
     flex-basis: 40vw;
     margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 94vh;
+    overflow-y: auto;
   }
 }
