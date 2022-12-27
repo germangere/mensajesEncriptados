@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="index.css">
+  <title>Mensajes encriptados</title>
+</head>
+
+<body>
+  <header>
+    <span id="logo" class="material-symbols-outlined">vpn_key</span>
+  </header>
+  <main>
+    <form>
+      <textarea name="input" placeholder="Inserta tu texto aquí"></textarea>
+      <p id="advertencia"><span id="error" class="material-symbols-outlined">error</span> Sólo minúsculas, sin tildes
+      </p>
+      <div id="botones">
+        <button id="encriptar">Encriptar</button>
+        <button id="desencriptar">Desencriptar</button>
+      </div>
+    </form>
+    <div id="resultado">
+      <h3>Ningún mensaje encontrado</h3>
+      <p>Ingresa el texto a procesar</p>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
